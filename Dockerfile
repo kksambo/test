@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the jar file (assuming you have built your project)
-COPY target/one.jar app.jar  
+COPY one.jar app.jar  
 
 # Expose the port the app runs on
 EXPOSE 8080
