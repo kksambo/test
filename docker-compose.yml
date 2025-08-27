@@ -1,14 +1,25 @@
-version: "3.8"
-
+version: '3.8'
 services:
   backend:
     build: ./backend
     container_name: fastapi_app
     ports:
-      - "8002:8002"
-
+      - '8002:8002'
   frontend:
     build: ./frontend
     container_name: html_app
     ports:
-      - "8080:80"
+      - '8080:80'
+    db:
+      image: 'postgres:14'
+      restart: always
+      environment:
+        POSTGRES_DB: employees
+        POSTGRES_USER: sambo
+        POSTGRES_PASSWORD: 1234
+      ports:
+        - '5432:5432'
+      volumes:
+        - 'db_data:/var/lib/postgresql/data'
+    volumes:
+      db_data: null
