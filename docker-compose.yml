@@ -10,16 +10,20 @@ services:
     container_name: html_app
     ports:
       - '8080:80'
-    db:
-      image: 'postgres:14'
-      restart: always
-      environment:
-        POSTGRES_DB: employees
-        POSTGRES_USER: sambo
-        POSTGRES_PASSWORD: 1234
+  db:
+    image: 'postgres:14'
+    restart: always
+    environment:
+      POSTGRES_DB: employees
+      POSTGRES_USER: sambo
+      POSTGRES_PASSWORD: 1234
       ports:
         - '5432:5432'
       volumes:
         - 'db_data:/var/lib/postgresql/data'
-    volumes:
-      db_data: 
+  volumes:
+    db_data: 
+
+
+
+    
