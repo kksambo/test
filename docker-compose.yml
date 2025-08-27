@@ -14,9 +14,9 @@ services:
     image: 'postgres:14'
     restart: always
     environment:
-      POSTGRES_DB: employees
-      POSTGRES_USER: sambo
-      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: 'employees'
+      POSTGRES_USER: 'sambo'
+      POSTGRES_PASSWORD: '1234'
       ports:
         - '5432:5432'
       volumes:
