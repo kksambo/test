@@ -20,7 +20,7 @@ services:
       POSTGRES_USER: 'sambo'
       POSTGRES_PASSWORD: '1234'
     ports:
-      - '5432:5432'
+      - '5434:5434'
     volumes:
       - 'db_data:/var/lib/postgresql/data'
 
